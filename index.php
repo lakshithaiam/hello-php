@@ -9,6 +9,13 @@ echo "<p>Server IP: " . $serverIp . "</p>";
 $clientIp = $_SERVER['REMOTE_ADDR'] ?? "Not Available";
 echo "<p>Client IP: " . $clientIp . "</p>";
 
+
+// PHP version info
+echo "<h2>PHP Info</h2>";
+echo "<p>PHP Version: " . phpversion() . "</p>";
+echo "<p>Server Software: " . ($_SERVER['SERVER_SOFTWARE'] ?? 'Unknown') . "</p>";
+
+
 // Visitor counter
 $file = "counter.txt";
 if (!file_exists($file)) {
